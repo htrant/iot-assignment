@@ -16,7 +16,7 @@ A serverless application
 ```
 - Application running at http://localhost:4001
 
-### 3. Test application
+### 3. Test application locally
 - Create new equipment
 ```
 $ curl -X POST \
@@ -78,4 +78,10 @@ $ curl -X GET \
   "last": "LAST_EVALUATED_ITEM"
  }
 ]
+```
+
+### 4. Build and deploy
+- Run script to deploy to AWS with target deployment environment 
+```
+$ sh scripts/4_build_and_deploy.sh $TARGET_ENVIRONMENT
 ```

@@ -1,9 +1,10 @@
 ## IOT-ASSIGNMENT
-A serverless application
+A serverless application with serverless framework, DynamoDB, AWS Lambda, API Gateway
 
 ### 1. Setup AWS resources
 - Run CF template `cloudformation/1_dynamodb.yaml` to create DynamoDB table
 - Fix DynamoDB Arn and run template `cloudformation/2_iam.yaml` to create IAM role
+
 
 ### 2. Setup and run local
 - This application requires AWS profile named `local` to run, follow AWS guide to setup on your machine
@@ -15,6 +16,7 @@ A serverless application
   3_start_local.sh  start application locally
 ```
 - Application running at http://localhost:4001
+
 
 ### 3. Test application locally
 - Create new equipment
@@ -79,6 +81,19 @@ $ curl -X GET \
  }
 ]
 ```
+
+- Application info (quickly check if application is up)
+```
+$ curl -X GET \
+   http://localhost:4001/info \
+   -H 'Content-Type: application/json'
+
+### Response ###
+{
+ "status": "OK"
+}
+```
+
 
 ### 4. Build and deploy
 - Run script to deploy to AWS with target deployment environment 

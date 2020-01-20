@@ -1,0 +1,13 @@
+{
+  "plugins": ["source-map-support", "rewire"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+            "node": "12.14.0"
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: DynamoDB table
+Resources:
+  EquipmentTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: equipmentNumber
+          AttributeType: S
+      KeySchema:
+        - AttributeName: equipmentNumber
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      TableName: equipments

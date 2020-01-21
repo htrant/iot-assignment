@@ -38,10 +38,10 @@ $ curl -X POST \
 }
 ```
 
-- Get single equipment by its `EQUIPMENT_NUMBER`
+- Get single equipment by its `equipmentNumber`
 ```
 $ curl -X GET \
-   http://localhost:4001/equipments/[EQUIPMENT_NUMBER] \
+   http://localhost:4001/equipments/{equipmentNumber} \
    -H 'Content-Type: application/json'
 
 ### Response ###
@@ -54,10 +54,10 @@ $ curl -X GET \
 }
 ```
 
-- Search for equipments with limit of how many items to get and pagination. If response contains object `{"last": "LAST_EVALUATED_ITEM"}`, there are more results to fetch. To get more, send request with query parameter `&last=LAST_EVALUATED_ITEM`
+- Search for equipment items with limit of how many to get and pagination. If response contains object `{"last": "abc-123"}` (abc-123 is sample value of `equipmentNumber`), there are more equipment items to fetch. To get more, send request with query parameter, e.g `&last=abc-123`
 ```
 $ curl -X GET \
-   'http://localhost:4001/equipments/search?limit=2&last=LAST_EVALUATED_ITEM' \
+   'http://localhost:4001/equipments/search?limit=2&last={equipmentNumber}' \
    -H 'Content-Type: application/json'
 
 ### Response ###
@@ -77,7 +77,7 @@ $ curl -X GET \
   "status": "stopped"
  },
  {
-  "last": "LAST_EVALUATED_ITEM"
+  "last": "123-abc"
  }
 ]
 ```

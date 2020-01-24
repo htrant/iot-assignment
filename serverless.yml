@@ -6,6 +6,7 @@ provider:
   stage: ${opt:stage, 'dev'}
   role: arn:aws:iam::XXXXX:role/serverless-role
   runtime: nodejs12.x
+  memorySize: 128
 
 plugins:
   - serverless-offline

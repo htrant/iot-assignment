@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-$TARGET_ENVIRONMENT=$1
+TARGET_ENVIRONMENT=$1
 
 if [ -z "$TARGET_ENVIRONMENT" ]; then
   echo "Variable (TARGET_ENVIRONMENT) setting target environment to deploy is invalid"

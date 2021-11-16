@@ -23,7 +23,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "aws-sdk": "^2.603.0",
+    "aws-sdk": "^2.814.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "serverless": "^1.61.0",
